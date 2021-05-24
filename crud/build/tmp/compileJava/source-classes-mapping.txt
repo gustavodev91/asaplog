@@ -1,0 +1,26 @@
+asaplog/crud/com/validate/MongoValidationConfig.java
+ asaplog.crud.com.validate.MongoValidationConfig
+asaplog/crud/com/model/Cliente.java
+ asaplog.crud.com.model.Cliente
+asaplog/crud/com/service/impl/ApoliceServiceImpl.java
+ asaplog.crud.com.service.impl.ApoliceServiceImpl
+asaplog/crud/com/service/ApoliceService.java
+ asaplog.crud.com.service.ApoliceService
+asaplog/crud/com/model/ApoliceDetails.java
+ asaplog.crud.com.model.ApoliceDetails
+asaplog/crud/com/repository/ClienteRepository.java
+ asaplog.crud.com.repository.ClienteRepository
+asaplog/crud/CrudApplication.java
+ asaplog.crud.CrudApplication
+asaplog/crud/com/controller/ClienteController.java
+ asaplog.crud.com.controller.ClienteController
+asaplog/crud/com/service/impl/ClienteServiceImpl.java
+ asaplog.crud.com.service.impl.ClienteServiceImpl
+asaplog/crud/com/model/Apolice.java
+ asaplog.crud.com.model.Apolice
+asaplog/crud/com/controller/ApoliceController.java
+ asaplog.crud.com.controller.ApoliceController
+asaplog/crud/com/service/ClienteService.java
+ asaplog.crud.com.service.ClienteService
+asaplog/crud/com/repository/ApoliceRepository.java
+ asaplog.crud.com.repository.ApoliceRepository

@@ -1,0 +1,2 @@
+asaplog/crud/CrudApplicationTests.java
+ asaplog.crud.CrudApplicationTests

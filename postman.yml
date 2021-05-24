@@ -1,0 +1,942 @@
+{
+	"info": {
+		"_postman_id": "8620e71f-8c1e-42ef-8a0b-1e285e2de045",
+		"name": "AsapLog",
+		"description": "Collection contendo todos os endpoints desenvolvido para o desafio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cliente",
+			"item": [
+				{
+					"name": "Listar Clientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cpf",
+								"value": "\"12123\"",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\" : \"teste\",\n    \"cpf\" : \"12123\",\n    \"cidade\" : \"mggm\",\n    \"uf\" : \"mg\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								""
+							]
+						},
+						"description": "Lista todos os Clientes"
+					},
+					"response": [
+						{
+							"name": "Listar Clientes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "cpf",
+										"value": "\"12123\"",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\" : \"teste\",\n    \"cpf\" : \"12123\",\n    \"cidade\" : \"mggm\",\n    \"uf\" : \"mg\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/cliente/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cliente",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 May 2021 19:43:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"cpf\": \"08822396600\",\n        \"nome\": \"User\",\n        \"cidade\": \"São Paulos\",\n        \"uf\": \"SP\"\n    },\n    {\n        \"cpf\": \"32132883653\",\n        \"nome\": \"User\",\n        \"cidade\": \"São Paulo\",\n        \"uf\": \"SP\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Adicionar Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"User\",\n    \"cpf\": \"32132883653\",\n    \"cidade\": \"São Paulo\",\n    \"uf\": \"SP\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								""
+							]
+						},
+						"description": "Adiciona um cliente\n\nOs campos devem ser enviados pelo body no formado JSON\n\nSão obrigatório os seguintes campos:\n-   Campo  :   Tipo\n-   nome   :  String\n-   cpf    :  String\n- cidade   : String\n-    uf    : String\n\nRetorna Status 200, se adicionou.\nRetorna Status 400, em caso de parâmetros incorretos"
+					},
+					"response": [
+						{
+							"name": "Adicionar Cliente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"User\",\n    \"cpf\": \"32132883653\",\n    \"cidade\": \"São Paulo\",\n    \"uf\": \"SP\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/cliente/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cliente",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 May 2021 19:26:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cpf\": \"32132883653\",\n    \"nome\": \"User\",\n    \"cidade\": \"São Paulo\",\n    \"uf\": \"SP\"\n}"
+						},
+						{
+							"name": "Adicionar Cliente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"User\",\n    \"cpf\": \"32132883653\",\n    \"cidade\": \"São Paulo\",\n    \"uf\": \"SP\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/cliente/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cliente",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 May 2021 19:44:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cpf\": \"32132883653\",\n    \"nome\": \"User\",\n    \"cidade\": \"São Paulo\",\n    \"uf\": \"SP\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Busca cliente pelo CPF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/08822396600",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"08822396600"
+							]
+						},
+						"description": "Busca um cliente especifico pelo seu cpf, se ela existir.\n\nURL = /cliente/0000000\n\nOnde 0000000 é um exemplo de cpf.\n\nRetorna código 200 se conseguiu encontrar ou 400 se não encontrou o cliente."
+					},
+					"response": [
+						{
+							"name": "Busca cliente pelo CPF",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/cliente/08822396600",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cliente",
+										"08822396600"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 May 2021 19:43:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cpf\": \"08822396600\",\n    \"nome\": \"User\",\n    \"cidade\": \"São Paulos\",\n    \"uf\": \"SP\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Remover um cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/32132883653",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"32132883653"
+							]
+						},
+						"description": "Remove um cliente pelo CPF\n\nO CPF deve ser passado como parâmetro na url\n\n#URL = /cliente/000000\nOnde 000000 é um exemplo de número.\n\nRetorna código 200 se conseguiu apagar ou 400 se não encontrou o cliente."
+					},
+					"response": [
+						{
+							"name": "Remover um cliente",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cliente/32132883653",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cliente",
+										"32132883653"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 May 2021 19:43:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Cliente removido"
+						}
+					]
+				},
+				{
+					"name": "Atualiza um cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"User\",\n    \"cpf\": \"08822396600\",\n    \"cidade\": \"São Paulos\",\n    \"uf\": \"SP\"\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/08822396600",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"08822396600"
+							]
+						},
+						"description": "Atualiza um cliente\n\nOs campos devem ser enviados pelo body no formado JSON\n\nSão obrigatório os seguintes campos:\n-   Campo  :   Tipo\n-   nome   :  String\n-   cpf    :  String\n- cidade   : String\n-    uf    : String\n\nRetorna Status 200, se atualizou.\nRetorna Status 400, em caso de parâmetros incorretos"
+					},
+					"response": []
+				}
+			],
+			"description": "# Rotas para os endpoints relacionados ao cliente\n\n- Listar todos clientes\n- Buscar um cliente\n- Adcionar cliente\n- Remover cliente\n",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "apolice",
+			"item": [
+				{
+					"name": "Listar todas apólices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/apolice/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apolice",
+								""
+							]
+						},
+						"description": "Listar todas as apólices"
+					},
+					"response": [
+						{
+							"name": "Listar todas apólices",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/apolice/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"apolice",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 May 2021 19:44:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"numero\": \"XPQBcgmlvV\",\n        \"vigenciaInicio\": \"1991-10-14T00:00:00.000+00:00\",\n        \"vigenciaFim\": \"1991-10-14T00:00:00.000+00:00\",\n        \"placaVeiculo\": \"MVH-1232\",\n        \"valor\": 12321.23,\n        \"cliente\": {\n            \"cpf\": \"08822396600\",\n            \"nome\": \"User\",\n            \"cidade\": \"São Paulos\",\n            \"uf\": \"SP\"\n        }\n    },\n    {\n        \"numero\": \"IGMs8QFzEH\",\n        \"vigenciaInicio\": \"1991-10-14T00:00:00.000+00:00\",\n        \"vigenciaFim\": \"2021-10-14T00:00:00.000+00:00\",\n        \"placaVeiculo\": \"MVH-1232\",\n        \"valor\": 12321.23,\n        \"cliente\": {\n            \"cpf\": \"08822396600\",\n            \"nome\": \"User\",\n            \"cidade\": \"São Paulos\",\n            \"uf\": \"SP\"\n        }\n    }\n]"
+						},
+						{
+							"name": "Listar todas apólices",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/apolice/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"apolice",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 May 2021 19:46:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"numero\": \"XPQBcgmlvV\",\n        \"vigenciaInicio\": \"1991-10-14T00:00:00.000+00:00\",\n        \"vigenciaFim\": \"2021-10-14T00:00:00.000+00:00\",\n        \"placaVeiculo\": \"MVH-1232\",\n        \"valor\": 12321.23,\n        \"cliente\": {\n            \"cpf\": \"08822396600\",\n            \"nome\": \"User\",\n            \"cidade\": \"São Paulos\",\n            \"uf\": \"SP\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Buscar uma apólice específica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/apolice/XPQBcgmlvV",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apolice",
+								"XPQBcgmlvV"
+							]
+						},
+						"description": "Busca uma apólice especifica pelo seu número registrado, se ela existir.\n\nURL = /apolice/IGMs8QFzEH\n\nOnde IGMs8QFzEH é um exemplo de número de apólice.\n\nRetorna código 200 se conseguiu encontrar ou 400 se não encontrou a apólice."
+					},
+					"response": [
+						{
+							"name": "Buscar uma apólice específica",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/apolice/IGMs8QFzEH",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"apolice",
+										"IGMs8QFzEH"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 May 2021 19:44:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"numero\": \"IGMs8QFzEH\",\n    \"vigenciaInicio\": \"1991-10-14T00:00:00.000+00:00\",\n    \"vigenciaFim\": \"2021-10-14T00:00:00.000+00:00\",\n    \"placaVeiculo\": \"MVH-1232\",\n    \"valor\": 12321.23,\n    \"cliente\": {\n        \"cpf\": \"08822396600\",\n        \"nome\": \"User\",\n        \"cidade\": \"São Paulos\",\n        \"uf\": \"SP\"\n    }\n}"
+						},
+						{
+							"name": "Buscar uma apólice específica",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/apolice/XPQBcgmlvV",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"apolice",
+										"XPQBcgmlvV"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 May 2021 19:46:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"numero\": \"XPQBcgmlvV\",\n    \"vigenciaInicio\": \"1991-10-14T00:00:00.000+00:00\",\n    \"vigenciaFim\": \"2021-10-14T00:00:00.000+00:00\",\n    \"placaVeiculo\": \"MVH-1232\",\n    \"valor\": 12321.23,\n    \"cliente\": {\n        \"cpf\": \"08822396600\",\n        \"nome\": \"User\",\n        \"cidade\": \"São Paulos\",\n        \"uf\": \"SP\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Apaga uma apólice",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/apolice/IGMs8QFzEH",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apolice",
+								"IGMs8QFzEH"
+							]
+						},
+						"description": "Apaga uma apólice pelo numero registrado.\n\nO numero da apólice deve ser passado como parâmetro na url\n\nURL = /apolice/IGMs8QFzEH\n\nOnde IGMs8QFzEH é um exemplo de número.\n\nRetorna código 200 se conseguiu apagar ou 400 se não encontrou a apólice para apagar"
+					},
+					"response": [
+						{
+							"name": "Apaga uma apólice",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/apolice/IGMs8QFzEH",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"apolice",
+										"IGMs8QFzEH"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 May 2021 19:44:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Apolice Removido"
+						}
+					]
+				},
+				{
+					"name": "Atualiza apólice",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numero\": \"3213\",\n    \"vigenciaFim\": \"2021-10-14T00:00:00.000+00:00\",\n    \"vigenciaInicio\": \"1991-10-14T00:00:00.000+00:00\",\n    \"placaVeiculo\": \"MVH-1232\",\n    \"valor\": 12321.23,\n    \"cliente\": {\n        \"cpf\": \"08822396600\",\n        \"nome\": \"User\",\n        \"cidade\": \"São Paulos\",\n        \"uf\": \"SP\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/apolice/XPQBcgmlvV",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apolice",
+								"XPQBcgmlvV"
+							]
+						},
+						"description": "Atualiza uma apólice\n\nO numero da apólice deve ser passado como parâmetro na url\nURL = /apolice/000000\n\nOs campos devem ser enviados pelo body no formado JSON\n\nSão obrigatório os seguintes campos:\n- Campo               Tipo\n- vigenciaFim    :  Date(yyyy-MM-dd)\n- vigenciaInicio :  Date(yyyy-MM-dd)\n- placaVeiculo   :     String\n- valor          :     Decimal\n- cliente        :     Cliente \n\nRetorna Status 200, se atualizou.\nRetorna Status 400, em caso de parâmetros incorretos"
+					},
+					"response": [
+						{
+							"name": "Atualiza apólice",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"numero\": \"3213\",\n    \"vigenciaFim\": \"2021-10-14T00:00:00.000+00:00\",\n    \"vigenciaInicio\": \"1991-10-14T00:00:00.000+00:00\",\n    \"placaVeiculo\": \"MVH-1232\",\n    \"valor\": 12321.23,\n    \"cliente\": {\n        \"cpf\": \"08822396600\",\n        \"nome\": \"User\",\n        \"cidade\": \"São Paulos\",\n        \"uf\": \"SP\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/apolice/XPQBcgmlvV",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"apolice",
+										"XPQBcgmlvV"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 May 2021 19:45:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"numero\": \"XPQBcgmlvV\",\n    \"vigenciaInicio\": \"1991-10-14T00:00:00.000+00:00\",\n    \"vigenciaFim\": \"2021-10-14T00:00:00.000+00:00\",\n    \"placaVeiculo\": \"MVH-1232\",\n    \"valor\": 12321.23,\n    \"cliente\": {\n        \"cpf\": \"08822396600\",\n        \"nome\": \"User\",\n        \"cidade\": \"São Paulos\",\n        \"uf\": \"SP\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Buscar detalhes de uma apólice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/apolice/consulta-apolice?numero=IGMs8QFzEH",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apolice",
+								"consulta-apolice"
+							],
+							"query": [
+								{
+									"key": "numero",
+									"value": "IGMs8QFzEH"
+								}
+							]
+						},
+						"description": "Busca uma apólice especifica em detalhe, pelo seu número registrado, se ela existir.\n\nURL = /consulta-apolice?numero=IGMs8QFzEH\n\nOnde IGMs8QFzEH é um exemplo de número de apólice.\n\nRetorna código 200 se conseguiu encontrar ou 400 se não encontrou a apólice."
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar apólice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"vigenciaFim\" : \"1991-10-14\",\n    \"vigenciaInicio\" : \"1991-10-14\",\n    \"placaVeiculo\" : \"MVH-1232\",\n    \"valor\" : \"12321.23\",\n    \"cliente\" : {\n        \"cpf\": \"08822396600\",\n        \"nome\": \"dsadsa\",\n        \"cidade\": \"São Paulo\",\n        \"uf\": \"dasdsa\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/apolice/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apolice",
+								""
+							]
+						},
+						"description": "Adiciona uma apólice\n\nOs campos devem ser enviados pelo body no formado JSON\n\nSão obrigatório os seguintes campos:\n- Campo               Tipo\n- vigenciaFim    :  Date(yyyy-MM-dd)\n- vigenciaInicio :  Date(yyyy-MM-dd)\n- placaVeiculo   :     String\n- valor          :     Decimal\n- cliente        :     Cliente \n\nRetorna Status 200, se adicionou.\nRetorna Status 400, em caso de parâmetros incorretos"
+					},
+					"response": []
+				}
+			],
+			"description": "# Rotas para os endpoints relacionados a apólices\n\n- Listar todas apólices\n- Buscar uma apólice\n- Buscar detalhes de uma apólice\n- Adcionar apólice\n- Remover apólice\n",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
